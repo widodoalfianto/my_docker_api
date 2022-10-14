@@ -1,0 +1,16 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+
+    <script src="{{ url_for('static', filename='scripts/call_api.js') }}"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1> Generate Prompt </h1> 
+    <textarea rows="6" cols="50" id="q"></textarea>
+    <button onclick="call_api()" id="generate_button">Generate</button>
+    <div id="res"></div>
+</body>
