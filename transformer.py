@@ -32,7 +32,7 @@ if __name__ == '__main__':
     with open(MODEL_FILE_NAME, 'rb') as model_file:
         model, tokenizer = pickle.load(model_file)
 
-    sentence = 'Is this a good thing?'
+    sentence = ''
     prompt = generate_prompt(sentence, model, tokenizer)
 
     print(prompt)

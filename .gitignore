@@ -1,3 +1,6 @@
 env
 __pycache__
 model_file
+/tests/__pycache__
+/tests/.pytest_cache
+/.vscode

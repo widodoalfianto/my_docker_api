@@ -10,8 +10,12 @@ async function call_api() {
         document.getElementById('q').disabled = true;
         document.getElementById('generate_button').disabled = true;
         document.getElementById('generate_button').innerHTML = 'Generating..'
-        axios.post('/api', {
-            q:q
+
+        data = { q:q }
+        headers = { 'Content-Type': 'application/json' }
+
+        axios.post('/api', data, {
+            headers: headers
         })
         .then(function (response) {
             document.getElementById('res').innerHTML = '<textarea rows="20" cols="100">' + response.data + '</textarea>'
