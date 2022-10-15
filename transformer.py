@@ -5,6 +5,7 @@ import regex as re
 MAX_LENGTH = 1000
 
 def generate_prompt(input_text, model, tokenizer):
+    input_text = input_text.strip()
     input_text += '[endprompt]'
     input_ids = tokenizer.encode(input_text, 
                                 return_tensors='pt')
@@ -32,7 +33,7 @@ if __name__ == '__main__':
     with open(MODEL_FILE_NAME, 'rb') as model_file:
         model, tokenizer = pickle.load(model_file)
 
-    sentence = ''
+    sentence = 'Who is Donald Trump?'
     prompt = generate_prompt(sentence, model, tokenizer)
 
     print(prompt)
