@@ -8,6 +8,9 @@ This is a Flask API that runs on a Docker container, generating a prompt conditi
 # Example of an API call
 response = requests.post(url='hostname/api', { 'q' : 'To be or not to be'})
 ```
+```
+curl -d '{"q": "some text"}' -H 'Content-Type: application/json' hostname/api
+```
 
 <br>
 Before building and deploying, run the following command:<br>
